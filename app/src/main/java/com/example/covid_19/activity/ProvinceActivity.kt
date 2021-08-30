@@ -24,6 +24,7 @@ class ProvinceActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.rvProvince.layoutManager = LinearLayoutManager(this)
+
         RetrofitClient.instance.getProvinsi().enqueue(object :
             Callback<ArrayList<ProvinceResponse>> {
             override fun onResponse(call: Call<ArrayList<ProvinceResponse>>, response: Response<ArrayList<ProvinceResponse>>) {
